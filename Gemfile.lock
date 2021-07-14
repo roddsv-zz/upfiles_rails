@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/carrierwaveuploader/carrierwave.git
+  revision: e12fcbf46fa3a22d704b10d1b6925ded68ba5591
+  specs:
+    carrierwave (3.0.0.alpha)
+      activemodel (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      addressable (~> 2.6)
+      image_processing (~> 1.1)
+      marcel (~> 1.0.0)
+      ssrf_filter (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -62,9 +74,15 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    autoprefixer-rails (10.2.5.1)
+      execjs (> 0)
     bindex (0.8.1)
     bootsnap (1.7.5)
       msgpack (~> 1.0)
+    bootstrap (4.0.0)
+      autoprefixer-rails (>= 6.0.3)
+      popper_js (>= 1.12.9, < 2)
+      sass (>= 3.5.2)
     builder (3.2.4)
     byebug (11.1.3)
     capybara (3.35.3)
@@ -79,11 +97,15 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     erubi (1.10.0)
+    execjs (2.8.1)
     ffi (1.15.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    image_processing (1.12.1)
+      mini_magick (>= 4.9.5, < 5)
+      ruby-vips (>= 2.0.17, < 3)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     listen (3.5.1)
@@ -96,12 +118,14 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (1.0.1)
     method_source (1.0.0)
+    mini_magick (4.11.0)
     mini_mime (1.1.0)
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.7)
     nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
+    popper_js (1.16.0)
     public_suffix (4.0.6)
     puma (5.3.2)
       nio4r (~> 2.0)
@@ -144,7 +168,14 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.1.1)
+    ruby-vips (2.1.2)
+      ffi (~> 1.12)
     rubyzip (2.3.2)
+    sass (3.7.4)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -159,6 +190,9 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -168,6 +202,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    ssrf_filter (1.0.7)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -201,15 +236,19 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
+  bootstrap (~> 4.0.0.alpha5)
   byebug
   capybara (>= 3.26)
+  carrierwave!
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  mini_magick (~> 4.3)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4)
   sass-rails (>= 6)
   selenium-webdriver
+  simple_form
   spring
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
