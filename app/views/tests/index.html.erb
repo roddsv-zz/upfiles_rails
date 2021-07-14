@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tests</h1>
+<p>
+  <h1>Bem-vindo! Coloque aqui o seu arquivo!</h1>
+</p>
 
 <table>
   <thead>
@@ -13,7 +15,7 @@
   <tbody>
     <% @tests.each do |test| %>
       <tr>
-        <td><div src="<%= test.file %>"></td>
+        <td><a href="<%= test.file %>" target="_blank">Ler arquivo</a></td>
         <td><%= link_to 'Show', test %></td>
         <td><%= link_to 'Edit', edit_test_path(test) %></td>
         <td><%= link_to 'Destroy', test, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -24,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Test', new_test_path %>
+<%= link_to 'Clique aqui para escolher seu arquivo', new_test_path %>

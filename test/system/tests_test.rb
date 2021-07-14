@@ -15,7 +15,7 @@ class TestsTest < ApplicationSystemTestCase
     click_on "New Test"
 
     fill_in "File", with: @test.file
-    click_on "Create Test"
+    click_on "Enviar arquivo"
 
     assert_text "Test was successfully created"
     click_on "Back"
