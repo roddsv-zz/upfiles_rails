@@ -1,0 +1,25 @@
+Passo a passo de configuração do ambiente:
+1. sudo apt install curl git
+(Comando para instalação do git, provavelmente desnecessário por já estar configurado na máquina)
+2. git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+3. . $HOME/.asdf/asdf.sh
+4. . $HOME/.asdf/completions/asdf.bash
+
+Isso terminará a instalação do asdf. Para conferir, digite:
+asdf current (ele retornará a versão do Ruby instalada).
+
+Depois disso, para instalar o Erlang na versão de produção (21.2.4):
+1. asdf install erlang 21.2.4 (isso deve demorar um pouco mais, pelo menos na minha máquina ele demorou, mas dá certo).
+2. asdf local erlang 21.2.4
+
+Por fim, instalaremos o Elixir na mesma versão do ambiente de produção (1.8.0-otp-21):
+1. asdf install elixir 1.8.0-otp-21
+2. asdf local elixir 1.8.0-otp-21
+
+*-----------Depois disso, somente para verificação-------------*
+-- cat .tool-version
+
+Esse comando deve retornar a versão do Erlang e do Elixir instaladas, assim como os comandos:
+elixir --version
+erl --version
+
